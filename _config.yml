@@ -1,10 +1,11 @@
 # REQUIRED CHANGES
 # Edit next line to provide your own name.
-title: Molly Maluhia | Professional Portfolio
+title: Sarad Gajurel | Full-stack Software Engineer
+description: Sarad Gajurel is a results-driven software engineer with expertise in full-stack development, application design, and database management.
 # Edit next line, replacing 'techfolios' with your github username
-url: "https://techfolios.github.io"
+url: "https://saradgajurel.com.np"
 # Edit next line so that baseurl is "" if your repo is <username>.github.io
-baseurl: "/template"
+# baseurl: "/portfolio"
 
 # OPTIONAL CHANGES
 ## Specify the theme using any of the css files in css/techfolio-theme
@@ -13,6 +14,7 @@ techfolio-theme: default.css
 rouge-theme: github.css
 
 # DON'T CHANGE THE FOLLOWING (unless you know what you're doing)
+permalink: /:title/
 markdown: kramdown
 kramdown:
   hard_wrap: false
@@ -25,8 +27,11 @@ exclude:
   - Gemfile.lock
   - LICENSE
   - README.md
+  - package.json
+  - package-lock.json  
 include:
   - .nojekyll
   - _data
 plugins:
   - jekyll-gist
+  - jekyll-sitemap

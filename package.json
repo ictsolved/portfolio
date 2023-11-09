@@ -1,0 +1,9 @@
+{
+  "private": true,
+  "scripts": {
+    "deploy": "bundle exec jekyll clean && bundle exec jekyll build && push-dir --dir=_site --branch=gh-pages --cleanup"
+  },
+  "devDependencies": {
+    "push-dir": "^0.4.1"
+  }
+}
