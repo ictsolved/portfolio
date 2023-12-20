@@ -1,0 +1,175 @@
+{
+  "basics": {
+    "name": "Sarad Gajurel",
+    "label": "Full-stack Software Engineer",
+    "picture": "https://avatars.githubusercontent.com/u/22026118",
+    "email": "info@saradgajurel.com.np",
+    "phone": "",
+    "website": "https://saradgajurel.com.np",
+    "summary": "I am a results-driven software engineer with expertise in full-stack development, application design, and database management. Proficient in technologies such as Flutter, .NET, Node.js, PostgreSQL, and more, I specialize in crafting efficient, scalable, and user-centric solutions. With more than 7 years of industry experience, I've successfully delivered numerous mobile and web applications. I excel in collaborative, innovative environments and am passionate about staying updated with the latest tech trends to contribute to impactful projects.",
+    "location": {
+      "address": "",
+      "postalCode": "44600",
+      "city": "Kathmandu",
+      "countryCode": "NP",
+      "region": "Bagmati"
+    },
+    "profiles": [
+      {
+        "network": "github",
+        "username": "ictsolved",
+        "url": "https://github.com/ictsolved"
+      },
+      {
+        "network": "linkedin",
+        "username": "saradgajurel",
+        "url": "https://linkedin.com/in/saradgajurel"
+      },
+      {
+        "network": "facebook",
+        "username": "saradgajurel",
+        "url": "https://facebook.com/saradgajurel"
+      },
+      {
+        "network": "twitter",
+        "username": "saradgajurel",
+        "url": "https://twitter.com/saradgajurel"
+      }
+    ]
+  },
+  "interests": [
+    { "name": "Mobile Computing" },
+    { "name": "Blogging" },
+    { "name": "AI/ML" },
+    { "name": "Automation" }
+  ],
+  "skills": [
+    {
+      "name": "Languages and Frameworks",
+      "keywords": [
+        "Flutter",
+        "Node.js",
+        ".NET",
+        "PostgreSQL",
+        "MongoDB",
+        "Nuxt",
+        "Jamstack"
+      ]
+    },
+    {
+      "name": "Toolsets/OS",
+      "keywords": ["Arch Linux", "i3wm", "Git"]
+    }
+  ],
+  "education": [
+    {
+      "institution": "Academia International College",
+      "area": "CSIT",
+      "studyType": "B.Sc.",
+      "startDate": "2014-09-15",
+      "endDate": "2019-01-10",
+      "courses": [
+        "C, C++, Java, .NET, PHP",
+        "Data Structure & Algorithm",
+        "Cryptography & Networking",
+        "System Design & Database Management",
+        "Technical Writing, Principles of Management",
+        "Numerical Methods & Statistics"
+      ]
+    }
+  ],
+  "work": [
+    {
+      "company": "Pioneer Associate Pvt. Ltd.",
+      "position": "Lead Software Engineer",
+      "website": "https://pioneerassociate.com.np",
+      "startDate": "2020-03-01",
+      "endDate": "Present",
+      "summary": "Head of Mobile App & Web Services Unit",
+      "highlights": [
+        "Mobile app with Flutter & Android",
+        "Backend development using Node.js, .NET, PostgreSQL, Laravel, MySQL",
+        "Web app with React, ASP.NET, Laravel, Flutter",
+        "Supervise Flutter and Python developers during outstation job in India"
+      ]
+    },
+    {
+      "company": "Personal Blog",
+      "position": "Author",
+      "website": "https://ictsolved.github.io",
+      "startDate": "2016",
+      "endDate": "Present",
+      "highlights": ["Blog about programming, new tech trends and tutorials"]
+    },
+    {
+      "company": "Sajha Real Estate Investment Company",
+      "position": "Technical Advisor",
+      "website": "https://info.sajhainvestment.com",
+      "startDate": "2022",
+      "endDate": "2023",
+      "summary": "Consultant and Mentor (App Development)",
+      "highlights": [
+        "Mentor cross-platform application developers",
+        "Co-ordinate with backend developers"
+      ]
+    },
+    {
+      "company": "Qubex Edu ERP",
+      "position": "Software Developer",
+      "website": "https://facebook.com/qubexedu",
+      "startDate": "2018-09-03",
+      "endDate": "2019-04-26",
+      "highlights": [
+        "Develop cross-platform mobile applications using Flutter",
+        "Develop REST API using .NET Core",
+        "Develop web application using Vue.js"
+      ]
+    },
+    {
+      "company": "Sprout Technology Service Pvt. Ltd.",
+      "position": "Data Specialist",
+      "website": "https://www.cloudfactory.com",
+      "startDate": "2016-02-01",
+      "endDate": "2023-03-06",
+      "highlights": [
+        "Upheld our CF worker values: Character, Competence and Community.",
+        "Undertook all assigned responsibilities during the working period.",
+        "Met project output requirements with regards to speed and accuracy.",
+        "Maintained utmost confidentiality with company-wide information.",
+        "Attended relevant project meetings including an initial training period.",
+        "Attended team meetings and participated in community service projects."
+      ]
+    }
+  ],
+  "awards": [
+    {
+      "title": "Aspiring Candidate",
+      "date": "2022",
+      "awarder": "Pioneer Associate Pvt. Ltd",
+      "summary": "Appreciation for the initiative, enthusiasm and support towards organization goals."
+    },
+    {
+      "title": "NOSKode 2016 Winner",
+      "date": "2016",
+      "awarder": "Nepal Open Source Club (NOSK)",
+      "summary": "Winner of NOSKode Hackathon"
+    },
+    {
+      "title": "Certificate of Merit",
+      "date": "2014",
+      "awarder": "Prasadi Academy",
+      "summary": "100% punctuality for two years in a row (2012-2014)"
+    },
+    {
+      "title": "Certificate of Merit",
+      "date": "2013",
+      "awarder": "Prasadi Academy",
+      "summary": "100% punctuality throughout the year 2012"
+    }
+  ],
+  "references": [
+    {
+      "name": "Available upon request"
+    }
+  ]
+}
