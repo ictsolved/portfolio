@@ -6,3 +6,4 @@ gem "webrick"
 gem 'html-proofer'
 gem 'jekyll-gist'
 gem 'rouge'
+gem 'json'
