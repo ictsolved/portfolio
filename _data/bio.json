@@ -1,12 +1,12 @@
 {
   "basics": {
     "name": "Sarad Gajurel",
-    "label": "Full-stack Software Engineer",
+    "label": "Lead Software Engineer",
     "picture": "https://avatars.githubusercontent.com/u/22026118",
     "email": "info@saradgajurel.com.np",
     "phone": "",
     "website": "https://saradgajurel.com.np",
-    "summary": "I am a results-driven software engineer with expertise in full-stack development, application design, and database management. Proficient in technologies such as Flutter, .NET, Node.js, PostgreSQL, and more, I specialize in crafting efficient, scalable, and user-centric solutions. With more than 5 years of industry experience, I've successfully delivered numerous mobile and web applications. I excel in collaborative, innovative environments and am passionate about staying updated with the latest tech trends to contribute to impactful projects.",
+    "summary": "Lead Software Engineer with 5+ years building enterprise mobile apps, SaaS platforms, and full-stack web systems. At Pioneer Associate, I lead a team of up to 11 engineers — shipping 100+ white-label mobile banking apps, a multi-method payment platform, ERP systems, and multiple production SaaS products. Stack: Flutter, Node.js, React, Nuxt.js, .NET, PostgreSQL, MongoDB, Docker, and CI/CD. I also independently publish Android apps on Google Play. Best Team Award (May 2025).",
     "location": {
       "address": "",
       "postalCode": "44600",
@@ -45,20 +45,28 @@
   ],
   "skills": [
     {
-      "name": "Languages and Frameworks",
-      "keywords": [
-        "Flutter",
-        "Node.js",
-        ".NET",
-        "PostgreSQL",
-        "MongoDB",
-        "Nuxt",
-        "Jamstack"
-      ]
+      "name": "Mobile",
+      "keywords": ["Flutter", "Dart", "Android", "App Flavors / White-labeling", "Firebase"]
+    },
+    {
+      "name": "Backend & APIs",
+      "keywords": ["Node.js", "REST API Design", ".NET Core"]
+    },
+    {
+      "name": "Frontend",
+      "keywords": ["React", "Nuxt.js", "JavaScript"]
+    },
+    {
+      "name": "Databases",
+      "keywords": ["PostgreSQL", "MongoDB", "MySQL", "SQL Server"]
+    },
+    {
+      "name": "Cloud & DevOps",
+      "keywords": ["AWS", "Docker", "Nginx", "CI/CD", "Git", "Linux (Arch)", "VPS"]
     },
     {
       "name": "Toolsets/OS",
-      "keywords": ["Arch Linux", "i3wm", "Git"]
+      "keywords": ["VS Code", "Android Studio", "Arch Linux", "i3wm", "Jira"]
     }
   ],
   "education": [
@@ -87,10 +95,12 @@
       "endDate": "Present",
       "summary": "Head of Mobile App & Web Services Unit",
       "highlights": [
-        "Mobile app with Flutter & Android",
-        "Backend development using Node.js, .NET, PostgreSQL, Laravel, MySQL",
-        "Web app with React, ASP.NET, Laravel, Flutter",
-        "Supervise Flutter and Python developers during outstation job in India"
+        "Led a cross-functional team of up to 11 engineers across Flutter, Node.js, .NET, and React stacks",
+        "Architected CoSys Mobile Banking with 100+ white-label app flavors on a single Flutter codebase, deployed across cooperative banks with CI/CD",
+        "Built and shipped SaaS platforms: Restaurant Management (Node.js, React, MongoDB, Docker), Waste Management (Node.js, PostgreSQL, Docker), and Manpower HR System (ASP.NET Blazor, PostgreSQL)",
+        "Developed Check Writer — a REST API-driven payment platform supporting checks, eChecks, ACH, credit/debit, wire transfers, and wallet",
+        "Established CI/CD pipelines, code standards, and sprint workflows; supervised developers during outstation deployment in India",
+        "Awarded Best Team (May 2025) as team lead for exceptional on-time delivery"
       ]
     },
     {
@@ -103,7 +113,7 @@
     },
     {
       "company": "Sajha Real Estate Investment Company",
-      "position": "Technical Advisor",
+      "position": "IT Consultant",
       "website": "https://info.sajhainvestment.com",
       "startDate": "2022",
       "endDate": "2023",
@@ -142,6 +152,12 @@
     }
   ],
   "awards": [
+    {
+      "title": "Best Team Award",
+      "date": "2025",
+      "awarder": "Pioneer Associate Pvt. Ltd.",
+      "summary": "Recognized as team lead for exceptional on-time delivery performance."
+    },
     {
       "title": "Aspiring Candidate",
       "date": "2022",
