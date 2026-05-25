@@ -1,0 +1,43 @@
+# Sarad Gajurel — Lead Software Engineer
+
+> Personal portfolio and project showcase for Sarad Gajurel, a Lead Software Engineer from Kathmandu, Nepal with 5+ years of experience in Flutter mobile development, Node.js SaaS platforms, and .NET enterprise systems.
+
+## About
+
+Sarad Gajurel is a Lead Software Engineer at Pioneer Associate Pvt. Ltd. (2020–present) where he heads the Mobile App & Web Services Unit and leads a cross-functional team of up to 11 engineers. He has shipped 100+ white-label mobile banking apps, a multi-method payment platform, ERP systems, and multiple SaaS products. He also independently publishes Android apps on Google Play under the ICT Solved! brand.
+
+- Location: Kathmandu, Nepal
+- Email: saradgajurel@gmail.com
+- GitHub: https://github.com/ictsolved
+- LinkedIn: https://linkedin.com/in/saradgajurel
+
+## Skills
+
+- Mobile: Flutter, Dart, Android, App Flavors/White-labeling, Firebase
+- Backend: Node.js, Laravel (PHP), .NET Core, ASP.NET Blazor, REST API Design
+- Frontend: React, Nuxt.js, Vue.js, JavaScript
+- Databases: PostgreSQL, MongoDB, MySQL, SQL Server
+- Cloud & DevOps: AWS, Docker, Nginx, CI/CD, Git, Linux
+
+## Professional Projects
+
+- CoSys Apps — 100+ white-label mobile banking Flutter apps for cooperative banks across Nepal, deployed via CI/CD
+- Check Writer — Flutter payment platform supporting checks, eChecks, ACH, credit/debit, wire, and wallet transfers
+- ZenithFlow ERP — Flutter + Laravel enterprise ERP with ZK biometric device integration (attendance, payroll)
+- Waste Management SaaS — Node.js + PostgreSQL + Docker multi-tenant SaaS for waste management companies
+- Restaurant Management SaaS — Node.js + React + MongoDB single-vendor restaurant management platform
+- Manpower System — ASP.NET Blazor + PostgreSQL SaaS HR system for recruiting agencies
+
+## Personal Android Apps (Google Play)
+
+- GoalPulse — FIFA World Cup 2026 companion app (live scores, standings, bracket, predictions)
+- Focura — Gamified focus timer with XP, streaks, and achievements
+- Consistency — Offline habit tracker with streak visualisation
+- CSIT Tutor — Study app for B.Sc. CSIT students in Nepal
+- Munex — Financial decision engine for irregular income
+
+## Awards
+
+- Best Team Award — Pioneer Associate Pvt. Ltd., May 2025
+- Aspiring Candidate — Pioneer Associate Pvt. Ltd., 2022
+- NOSKode Hackathon Winner — Nepal Open Source Club, 2016

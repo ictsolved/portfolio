@@ -7,32 +7,25 @@ layout: home
   <div class="container">
 
     <div class="row">
-      <div class="col">
-        <h1 class="display-4 text-center">{{ site.data.bio.basics.name }}</h1>
-      </div>
-    </div>
+      <div class="col text-center">
+        <h1 class="display-4 mb-1">{{ site.data.bio.basics.name }}</h1>
+        <p class="mb-2 text-muted">{{ site.data.bio.basics.location.city }}, {{ site.data.bio.basics.location.countryCode | replace: 'NP', 'Nepal' }}</p>
+        <div class="d-flex flex-wrap justify-content-center gap-3 align-items-center">
+          {% capture url %}{{ site.data.bio.basics.website }}{% endcapture %}
+          {% capture label %}{{ site.data.bio.basics.website | remove: "http://" | remove: "https://" }}{% endcapture %}
+          {% include about/social.html url=url name='house' label=label %}
 
-    <div class="row">
-      <div class="col">
-        {% capture url %}{{ site.data.bio.basics.website }}{% endcapture %}
-        {% capture label %}{{ site.data.bio.basics.website | remove: "http://" | remove: "https://" }}{% endcapture %}
-        <p class="mb-1">{% include about/social.html url=url name='house' label=label %} </p>
+          {% capture url %}mailto:{{ site.data.bio.basics.email }}{% endcapture %}
+          {% capture label %}{{ site.data.bio.basics.email }}{% endcapture %}
+          {% include about/social.html url=url name='envelope' label=label %}
 
-        {% capture url %}mailto:{{ site.data.bio.basics.email }}{% endcapture %}
-        {% capture label %}{{ site.data.bio.basics.email }}{% endcapture %}
-        <p class="mb-1">{% include about/social.html url=url name='envelope' label=label %}</p>
-
-        {% for profile in site.data.bio.basics.profiles %}
-          {% capture url %}{{ profile.url }}{% endcapture %}
-          {% capture name %}{{ profile.network | downcase }}{% endcapture %}
-          {% capture label %}{{ profile.username }}{% endcapture %}
-          <p class="mb-1">{% include about/social.html url=url name=name label=label %}</p>
-        {% endfor %}
-      </div>
-      <div class="col">
-        <p class="mb-1 text-end">{{ site.data.bio.basics.location.address }}</p>
-        <p class="mb-1 text-end">{{ site.data.bio.basics.location.city }}, {{ site.data.bio.basics.location.region }} {{ site.data.bio.basics.location.postalCode }} {{ site.data.bio.basics.location.countryCode }}</p>
-        <p class="mb-1 text-end">{{ site.data.bio.basics.phone }}</p>
+          {% for profile in site.data.bio.basics.profiles %}
+            {% capture url %}{{ profile.url }}{% endcapture %}
+            {% capture name %}{{ profile.network | downcase }}{% endcapture %}
+            {% capture label %}{{ profile.username }}{% endcapture %}
+            {% include about/social.html url=url name=name label=label %}
+          {% endfor %}
+        </div>
       </div>
     </div>
 

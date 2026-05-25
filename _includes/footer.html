@@ -1,8 +1,10 @@
 <footer class="navbar navbar-expand navbar-light bg-light bg-gradient border-top">
   <div class="container-fluid">
+    <small class="text-muted ms-2">&copy; {{ 'now' | date: "%Y" }} {{ site.data.bio.basics.name }}</small>
     <div class="ms-auto">
       <ul class="navbar-nav mb-2 mb-lg-0">
-        <small><a class="nav-link" href="https://techfolios.github.io">Made with Techfolios</a></small>
+        <small><a class="nav-link text-muted" href="{{ site.data.bio.basics.profiles[0].url }}" target="_blank">GitHub</a></small>
+        <small><a class="nav-link text-muted" href="{{ site.data.bio.basics.profiles[1].url }}" target="_blank">LinkedIn</a></small>
       </ul>
     </div>
   </div>

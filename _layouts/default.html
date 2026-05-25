@@ -1,16 +1,20 @@
-{%- assign url = '/' | prepend: site.baseurl | prepend: site.url -%}
+{%- assign canonical_url = '/' | prepend: site.baseurl | prepend: site.url -%}
 {%- assign title = site.title -%}
 {%- assign description = site.description -%}
+{%- assign og_image = site.data.bio.basics.picture -%}
 
 {%- if page.url != '/' -%}
   {%- if page.url -%}
-    {%- assign url = page.url | prepend: site.baseurl | prepend: site.url -%}
+    {%- assign canonical_url = page.url | prepend: site.baseurl | prepend: site.url -%}
   {%- endif -%}
   {%- if page.title -%}
-    {%- assign title = page.title | append: ' | ' | append: site.title  -%}
+    {%- assign title = page.title | append: ' | ' | append: site.title -%}
   {%- endif -%}
   {%- if page.description -%}
     {%- assign description = page.description -%}
+  {%- endif -%}
+  {%- if page.image -%}
+    {%- assign og_image = page.image | prepend: '/' | prepend: site.baseurl | prepend: site.url -%}
   {%- endif -%}
 {%- endif -%}
 
@@ -19,29 +23,99 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Core SEO -->
+    <title>{{ title }}</title>
     <meta name="title" content="{{ title | xml_escape }}">
     <meta name="description" content="{{ description | xml_escape }}">
-    <meta name="image" content="{{ site.data.bio.basics.picture }}">
-    <meta property="og:type" content="website">
-    <meta property="og:site_name" content="{{ site.title | xml_escape }}">
-    <meta property="og:url" content="{{ url }}">
+    <meta name="author" content="{{ site.data.bio.basics.name }}">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="{{ canonical_url }}">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="{% if page.type == 'project' %}article{% else %}website{% endif %}">
+    <meta property="og:site_name" content="{{ site.data.bio.basics.name }}">
+    <meta property="og:url" content="{{ canonical_url }}">
     <meta property="og:title" content="{{ title | xml_escape }}">
     <meta property="og:description" content="{{ description | xml_escape }}">
-    <meta property="og:image" content="{{ site.data.bio.basics.picture }}">
+    <meta property="og:image" content="{{ og_image }}">
+    <meta property="og:locale" content="en_US">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@saradgajurel">
+    <meta name="twitter:title" content="{{ title | xml_escape }}">
+    <meta name="twitter:description" content="{{ description | xml_escape }}">
+    <meta name="twitter:image" content="{{ og_image }}">
+
+    <!-- JSON-LD: Person + WebSite (homepage only) -->
+    {%- if page.url == '/' -%}
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Person",
+          "@id": "{{ site.url }}/#person",
+          "name": "{{ site.data.bio.basics.name }}",
+          "jobTitle": "{{ site.data.bio.basics.label }}",
+          "description": "{{ site.data.bio.basics.summary | xml_escape }}",
+          "image": "{{ site.data.bio.basics.picture }}",
+          "url": "{{ site.url }}",
+          "email": "{{ site.data.bio.basics.email }}",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "{{ site.data.bio.basics.location.city }}",
+            "addressCountry": "{{ site.data.bio.basics.location.countryCode }}"
+          },
+          "sameAs": [
+            "https://linkedin.com/in/saradgajurel",
+            "https://github.com/ictsolved",
+            "https://twitter.com/saradgajurel"
+          ],
+          "knowsAbout": ["Flutter", "Dart", "Node.js", "React", "ASP.NET", "Laravel", "PostgreSQL", "MongoDB", "Docker", "CI/CD", "AWS"]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "{{ site.url }}/#website",
+          "url": "{{ site.url }}",
+          "name": "{{ site.data.bio.basics.name }}",
+          "description": "{{ site.description | xml_escape }}",
+          "author": { "@id": "{{ site.url }}/#person" }
+        }
+      ]
+    }
+    </script>
+    {%- endif -%}
+
+    <!-- JSON-LD: SoftwareApplication (project pages) -->
+    {%- if page.type == 'project' -%}
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "{{ page.title | xml_escape }}",
+      "description": "{{ description | xml_escape }}",
+      "author": { "@id": "{{ site.url }}/#person" },
+      "applicationCategory": "DeveloperApplication",
+      {% if page.image %}"image": "{{ page.image | prepend: '/' | prepend: site.baseurl | prepend: site.url }}",{% endif %}
+      {% if page.projecturl %}"url": "{{ page.projecturl }}",{% endif %}
+      "operatingSystem": "{% for label in page.labels %}{{ label }}{% unless forloop.last %}, {% endunless %}{% endfor %}"
+    }
+    </script>
+    {%- endif -%}
+
     <link rel="shortcut icon" href="{{ '/favicon.ico' | prepend: site.baseurl }}">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <link rel="stylesheet" href="{{ site.baseurl}}/css/techfolio-theme/{{ site.techfolio-theme}}">
     <link rel="stylesheet" type="text/css" href="{{ site.baseurl}}/css/rouge/{{ site.rouge-theme}}">
-    <!-- Load MathJax if 'mathjax: true' is found in your _config.yml. -->
     {% if site.mathjax %}
-    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-MML-AM_CHTML">
-    </script>
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-MML-AM_CHTML"></script>
     {% endif %}
-
-    <title>{{ title }}</title>
   </head>
-  <body>
-  {{ content }}
+  <body class="d-flex flex-column min-vh-100">
+  <div class="flex-grow-1">{{ content }}</div>
+  {% include footer.html %}
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
   </body>
 </html>

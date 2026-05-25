@@ -5,15 +5,15 @@
     </div>
     <div class="col-sm-6 col-md-8">
       <div class="card-body">
-        <h5 class="card-title">{{ include.page.title }} <small class="text-muted float-end">{{ include.page.date }}</small></h5>
+        <h5 class="card-title">{{ include.page.title }} {% if include.page.category %}<span class="badge rounded-pill align-middle" style="font-size:0.65rem; background-color:{% if include.page.category == 'professional' %}#0d6efd{% else %}#6c757d{% endif %}">{% if include.page.category == 'professional' %}Professional{% else %}Personal{% endif %}</span>{% endif %} <small class="text-muted float-end">{{ include.page.date }}</small></h5>
         <p class="card-text">{{ include.page.summary }}</p>
         <p>
           {% for label in include.page.labels %}
           <span style="background-color: var(--tf-pill-bg)" class="badge rounded-pill">{{ label }}</span>
           {% endfor %}
         </p>
-        {% if page.projecturl %}
-        <a href="{{ page.projecturl }}" class="btn btn-outline-dark">Project Site</a>
+        {% if include.page.projecturl %}
+        <a href="{{ include.page.projecturl }}" class="btn btn-outline-dark">Project Site</a>
         {% else %}
         <a href="{{ site.baseurl}}{{ include.page.url }}" class="btn btn-outline-dark">Read More</a>
         {% endif %}

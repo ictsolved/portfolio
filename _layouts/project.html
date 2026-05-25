@@ -3,6 +3,37 @@ layout: home
 ---
 
 <div class="container py-4">
-  <h1 class="display-4">{{ page.title }}</h1>
- {{ content }}
+
+  <a href="{{ site.baseurl }}/projects/" class="text-muted small d-inline-block mb-3">&larr; All Projects</a>
+
+  <div class="row g-4">
+    {% if page.image %}
+    <div class="col-md-4">
+      <img src="{{ site.baseurl }}/{{ page.image }}" alt="{{ page.title }}" class="img-fluid rounded" style="width:100%; object-fit:cover;">
+    </div>
+    <div class="col-md-8">
+    {% else %}
+    <div class="col-12">
+    {% endif %}
+      <div class="d-flex justify-content-between align-items-start flex-wrap gap-2 mb-2">
+        <h1 class="display-5 mb-0">{{ page.title }}</h1>
+        <small class="text-muted pt-2">{{ page.date }}</small>
+      </div>
+      <div class="d-flex flex-wrap align-items-center gap-2 mb-3">
+        {% if page.category %}
+        <span class="badge rounded-pill bg-secondary">{% if page.category == 'professional' %}Professional{% else %}Personal{% endif %}</span>
+        {% endif %}
+        {% for label in page.labels %}
+        <span class="badge rounded-pill" style="background-color: var(--tf-pill-bg)">{{ label }}</span>
+        {% endfor %}
+      </div>
+      <p class="text-muted">{{ page.summary }}</p>
+      <hr>
+      {{ content }}
+      {% if page.projecturl %}
+      <a href="{{ page.projecturl }}" target="_blank" class="btn btn-outline-dark btn-sm mt-3">View Project &rarr;</a>
+      {% endif %}
+    </div>
+  </div>
+
 </div>

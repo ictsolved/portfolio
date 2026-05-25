@@ -5,6 +5,8 @@ image: img/projects/cricketing-mis.png
 title: "Cricket Management Information Software"
 date: 2018-2019
 published: true
+category: professional
+description: "Cricket Management Information System with a .NET Core REST API, Vue.js admin dashboard, and Flutter mobile app — built to manage cricket tournaments, player statistics, and team performance."
 labels:
   - .NET Core
   - Vue.js
